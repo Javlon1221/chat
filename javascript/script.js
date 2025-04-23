@@ -64,25 +64,27 @@ addBtn.addEventListener("click", (e) => {
         newCard.className = "kards";
 
         newCard.innerHTML = `
-            <div class="kards_txt">
-                <div class="img">
-                    <img src="./img/man.jpeg" alt="">
-                </div>
+            <div class="infropntoof">
+          <div class="kards_txt">
+            <div class="img">
+              <img src="./img/man.jpeg" alt="" />
             </div>
-            <div class="kard_title">
-                <h1 class="ism">${name}</h1>
-                <p>${hobbies}</p>
-                <span>${about}</span>
-                <button>Follow me</button>
-            </div>
+          </div>
+          <div class="kard_title">
+            <h1 class="ism">${name}</h1>
+            <p>${hobbies}</p>
+            <span>${about}</span>
+            <button>Follow me</button>
+          </div>
+        </div>
         `;
 
         const sections = document.querySelectorAll(".container1");
         const cardsSection = sections[1]; 
         cardsSection.appendChild(newCard);
 
-    //     document.querySelectorAll(".form_input").forEach(input => input.value = "");
-    // } else {
-    //     alert("Qator qolib ketdi.");
-    // }
+        document.querySelectorAll(".form_input").forEach(input => input.value = "");
+    } else {
+        alert("Qator qolib ketdi.");
+    }
 });
