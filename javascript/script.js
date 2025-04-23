@@ -81,8 +81,8 @@ addBtn.addEventListener("click", (e) => {
         const cardsSection = sections[1]; 
         cardsSection.appendChild(newCard);
 
-        document.querySelectorAll(".form_input").forEach(input => input.value = "");
-    } else {
-        alert("Iltimos, barcha maydonlarni to'ldiring.");
-    }
+    //     document.querySelectorAll(".form_input").forEach(input => input.value = "");
+    // } else {
+    //     alert("Qator qolib ketdi.");
+    // }
 });
