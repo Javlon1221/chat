@@ -72,7 +72,7 @@ addBtn.addEventListener("click", (e) => {
             <div class="kard_title">
                 <h1 class="ism">${name}</h1>
                 <p>${hobbies}</p>
-                <p>${about}</p>
+                <span>${about}</span>
                 <button>Follow me</button>
             </div>
         `;
