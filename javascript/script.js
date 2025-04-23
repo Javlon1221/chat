@@ -1,16 +1,14 @@
 const formContollEl = document.querySelector(".form-control");
 const inputEl = document.querySelector(".input");
 const wrapper = document.querySelector(".wrapper");
-const conEl = document.querySelector(".con")
+const conEl = document.querySelector(".con");
 
 const DATA = [
     "Assalomu alaykum", "Yaxshi rahmat", "Nima bilan bandsiz", "ha",
     "tushunarli", "bilmadim", "nima hohlaysiz", "ko'rishguncha",
     "qayerdasiz", "tez yetib keling", "o'qishda", "men dunyo kezdim",
-    "😂😂😂😂😂", "👌👌👌", "❤️❤️❤️"
+    "😂😂😂😂😂", "👌👌👌", "❤️❤️❤️", "vxaxaxxaxxxaxxaxaxa", "siz kim siz", "uyga bor"
 ];
-
-
 
 function anotherMas() {
     const card = document.createElement("div");
@@ -49,4 +47,42 @@ formContollEl.addEventListener("submit", (event) => {
     setTimeout(() => {
         anotherMas();
     }, 3000);
+});
+
+
+const addBtn = document.querySelector(".form_btn");
+
+addBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const name = document.querySelectorAll(".form_input")[0].value.trim();
+    const hobbies = document.querySelectorAll(".form_input")[1].value.trim();
+    const about = document.querySelectorAll(".form_input")[2].value.trim();
+
+    if (name && hobbies && about) {
+        const newCard = document.createElement("div");
+        newCard.className = "kards";
+
+        newCard.innerHTML = `
+            <div class="kards_txt">
+                <div class="img">
+                    <img src="./img/man.jpeg" alt="">
+                </div>
+            </div>
+            <div class="kard_title">
+                <h1 class="ism">${name}</h1>
+                <p>${hobbies}</p>
+                <p>${about}</p>
+                <button>Follow me</button>
+            </div>
+        `;
+
+        const sections = document.querySelectorAll(".container1");
+        const cardsSection = sections[1]; 
+        cardsSection.appendChild(newCard);
+
+        document.querySelectorAll(".form_input").forEach(input => input.value = "");
+    } else {
+        alert("Iltimos, barcha maydonlarni to'ldiring.");
+    }
 });
